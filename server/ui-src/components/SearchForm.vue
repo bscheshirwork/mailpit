@@ -73,8 +73,8 @@ export default {
 					v-model.trim="search"
 					type="text"
 					class="form-control border-0"
-					aria-label="Search"
-					placeholder="Search mailbox"
+					aria-label="Поиск"
+					placeholder="Поиск в почтовом ящике"
 				/>
 				<span v-if="search != ''" class="btn btn-link position-absolute end-0 text-muted" @click="resetSearch"
 					><i class="bi bi-x-circle"></i

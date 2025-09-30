@@ -190,11 +190,11 @@ export default {
 	</template>
 	<template v-else>
 		<p class="text-center mt-5">
-			<span v-if="loadingMessages > 0" class="text-muted"> Loading messages... </span>
+			<span v-if="loadingMessages > 0" class="text-muted"> Загрузка писем/сообщений... </span>
 			<template v-else-if="getSearch()"
 				>No results for <code>{{ getSearch() }}</code></template
 			>
-			<template v-else>No messages in your mailbox</template>
+			<template v-else>Нет писем в вашем ящике</template>
 		</p>
 	</template>
 </template>

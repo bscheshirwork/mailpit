@@ -94,7 +94,7 @@ export default {
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 id="SettingsModalLabel" class="modal-title">Mailpit settings</h5>
+					<h5 id="SettingsModalLabel" class="modal-title">Настройки Mailpit</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
@@ -110,7 +110,7 @@ export default {
 								aria-controls="ui-tab-pane"
 								aria-selected="true"
 							>
-								Web UI
+								Веб UI
 							</button>
 						</li>
 						<li class="nav-item" role="presentation">
@@ -139,22 +139,22 @@ export default {
 							tabindex="0"
 						>
 							<div class="my-3">
-								<label for="theme" class="form-label">Mailpit theme</label>
+								<label for="theme" class="form-label">Mailpit тема внешнего вида</label>
 								<select id="theme" v-model="theme" class="form-select">
-									<option value="auto">Auto (detect from browser)</option>
+									<option value="auto">Auto (определяется из браузера)</option>
 									<option value="light">Light theme</option>
 									<option value="dark">Dark theme</option>
 								</select>
 							</div>
 							<div class="mb-3">
-								<label for="timezone" class="form-label">Timezone (for date searches)</label>
+								<label for="timezone" class="form-label">Timezone (для поиска по дате)</label>
 								<select
 									id="timezone"
 									v-model="mailbox.timeZone"
 									class="form-select tz"
 									data-allow-same="true"
 								>
-									<option disabled hidden value="">Select a timezone...</option>
+									<option disabled hidden value="">Выберете timezone...</option>
 									<option v-for="t in timezones" :key="t" :value="t.tzCode">{{ t.label }}</option>
 								</select>
 							</div>
@@ -168,7 +168,7 @@ export default {
 										role="switch"
 									/>
 									<label class="form-check-label" for="tagColors">
-										Use auto-generated tag colors
+										Использовать автоматически сгенерированные цвета тэгов
 									</label>
 								</div>
 							</div>
@@ -182,7 +182,7 @@ export default {
 										role="switch"
 									/>
 									<label class="form-check-label" for="htmlCheck">
-										Show HTML check message tab
+										Показывать вкладку HTML check message
 									</label>
 								</div>
 							</div>
@@ -196,7 +196,7 @@ export default {
 										role="switch"
 									/>
 									<label class="form-check-label" for="linkCheck">
-										Show link check message tab
+										Показывать вкладку link check message
 									</label>
 								</div>
 							</div>
@@ -210,7 +210,7 @@ export default {
 										role="switch"
 									/>
 									<label class="form-check-label" for="spamCheck">
-										Show spam check message tab
+										Показывать вкладку spam check message
 									</label>
 								</div>
 							</div>
@@ -224,11 +224,11 @@ export default {
 										role="switch"
 									/>
 									<label class="form-check-label" for="skip-confirmations">
-										Skip
+										Пропускать подтверждения диалогов
 										<template v-if="!mailbox.uiConfig.HideDeleteAllButton">
-											<code>Delete all</code> &amp;
+											<code>Удалить всё</code> &amp;
 										</template>
-										<code>Mark all read</code> confirmation dialogs
+										<code>Пометить все прочитанными</code>
 									</label>
 								</div>
 							</div>
@@ -248,7 +248,7 @@ export default {
 									href="https://mailpit.axllent.org/docs/integration/chaos/"
 									target="_blank"
 								>
-									see documentation </a
+									see documentation (не отовсюду доступен)</a
 								>).
 							</p>
 
