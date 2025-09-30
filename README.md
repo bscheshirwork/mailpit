@@ -32,6 +32,7 @@ Mailpit was originally **inspired** by MailHog which is [no longer maintained](h
 
 ## Features
 
+- Мой перевод основных элементов интерфейса
 - Runs entirely from a single [static binary](https://mailpit.axllent.org/docs/install/) or multi-architecture [Docker images](https://mailpit.axllent.org/docs/install/docker/)
 - Modern web UI with advanced [mail search](https://mailpit.axllent.org/docs/usage/search-filters/) to view emails (formatted HTML, highlighted HTML source, text, headers, raw source, and MIME attachments
 including image thumbnails), including optional [HTTPS](https://mailpit.axllent.org/docs/configuration/http/) & [authentication](https://mailpit.axllent.org/docs/configuration/http/)
@@ -92,6 +93,11 @@ Static binaries can always be found on the [releases](https://github.com/axllent
 
 See [Docker instructions](https://mailpit.axllent.org/docs/install/docker/) for 386, amd64 & arm64 images.
 
+Неофициальный образ
+```
+docker build -t bscheshir/mailpit:1.27.9 .
+docker push bscheshir/mailpit:1.27.9
+```
 
 ### Compile from source
 
