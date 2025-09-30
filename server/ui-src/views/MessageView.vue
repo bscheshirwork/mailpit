@@ -471,26 +471,26 @@ export default {
 			</RouterLink>
 		</div>
 		<div v-if="!errorMessage" class="col col-xl-5">
-			<button class="btn btn-outline-light me-3 d-xl-none" title="Return to messages" @click="goBack()">
+			<button class="btn btn-outline-light me-3 d-xl-none" title="Вернутся к письмам" @click="goBack()">
 				<i class="bi bi-arrow-return-left"></i>
-				<span class="ms-2 d-none d-lg-inline">Back</span>
+				<span class="ms-2 d-none d-lg-inline">Назад</span>
 			</button>
-			<button class="btn btn-outline-light me-1 me-sm-2" title="Mark unread" @click="toggleRead()">
+			<button class="btn btn-outline-light me-1 me-sm-2" title="Отметить непрочитанным" @click="toggleRead()">
 				<i class="bi bi-eye-slash me-md-2" :class="isRead ? 'bi-eye-slash' : 'bi-eye'"></i>
-				<span class="d-none d-md-inline">Mark <template v-if="isRead">un</template>read</span>
+				<span class="d-none d-md-inline">Отметить <template v-if="isRead">не</template>прочитанным</span>
 			</button>
 			<button
 				v-if="mailbox.uiConfig.MessageRelay && mailbox.uiConfig.MessageRelay.Enabled"
 				class="btn btn-outline-light me-1 me-sm-2"
-				title="Release message"
+				title="Отпустить птичку с письмом"
 				@click="initReleaseModal()"
 			>
 				<i class="bi bi-send me-md-2"></i>
-				<span class="d-none d-md-inline">Release</span>
+				<span class="d-none d-md-inline">Выпустить</span>
 			</button>
-			<button class="btn btn-outline-light me-1 me-sm-2" title="Delete message" @click="deleteMessage()">
+			<button class="btn btn-outline-light me-1 me-sm-2" title="Удалить письмо" @click="deleteMessage()">
 				<i class="bi bi-trash-fill me-md-2"></i>
-				<span class="d-none d-md-inline">Delete</span>
+				<span class="d-none d-md-inline">Удалить</span>
 			</button>
 		</div>
 		<div v-if="!errorMessage" class="col-auto col-lg-4 col-xl-4 text-end">
@@ -502,7 +502,7 @@ export default {
 					aria-expanded="false"
 				>
 					<i class="bi bi-file-arrow-down-fill"></i>
-					<span class="d-none d-md-inline ms-1">Download</span>
+					<span class="d-none d-md-inline ms-1">Загрузить</span>
 				</button>
 				<ul class="dropdown-menu dropdown-menu-end">
 					<li>
@@ -610,9 +610,9 @@ export default {
 				<button class="list-group-item list-group-item-action" @click="goBack()">
 					<i class="bi bi-arrow-return-left me-1"></i>
 					<span class="ms-1">
-						Return to
-						<template v-if="mailbox.searching">search</template>
-						<template v-else>inbox</template>
+						Вернуться к
+						<template v-if="mailbox.searching">поиску</template>
+						<template v-else>входящим</template>
 					</span>
 					<span
 						v-if="mailbox.unread && !errorMessage"
@@ -631,7 +631,7 @@ export default {
 				@scroll="scrollHandler"
 			>
 				<button v-if="liveLoaded >= 100" class="w-100 alert alert-warning small" @click="reloadWindow()">
-					Reload to see newer messages
+					Перезагрузить для отображения новых писем
 				</button>
 				<template v-if="messagesList && messagesList.length">
 					<div class="list-group">
@@ -678,7 +678,7 @@ export default {
 											? { backgroundColor: colorHash(t) }
 											: { backgroundColor: '#6c757d' }
 									"
-									:title="'Filter messages tagged with ' + t"
+									:title="'Поиск писем с тэгами ' + t"
 									@click="pagination.start = 0"
 								>
 									{{ t }}
