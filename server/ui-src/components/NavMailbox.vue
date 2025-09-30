@@ -145,7 +145,7 @@ export default {
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 id="MarkAllReadModalLabel" class="modal-title">Mark all messages as read?</h5>
+						<h5 id="MarkAllReadModalLabel" class="modal-title">Отметить все письма прочитанными?</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">

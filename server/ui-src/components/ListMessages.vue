@@ -155,7 +155,7 @@ export default {
 				</div>
 				<div class="col-lg-6 col-xxl-7 mt-2 mt-lg-0">
 					<div class="subject text-truncate text-spaces-nowrap">
-						<b>{{ message.Subject !== "" ? message.Subject : "[ no subject ]" }}</b>
+						<b>{{ message.Subject !== "" ? message.Subject : "[ без темы ]" }}</b>
 					</div>
 					<div v-if="message.Snippet !== ''" class="small text-muted text-truncate">
 						{{ message.Snippet }}

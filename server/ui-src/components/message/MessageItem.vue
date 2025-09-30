@@ -427,7 +427,7 @@ export default {
 							<th class="small">Subject</th>
 							<td>
 								<strong v-if="message.Subject != ''" class="text-spaces">{{ message.Subject }}</strong>
-								<small v-else class="text-body-secondary">[ no subject ]</small>
+								<small v-else class="text-body-secondary">[ без темы ]</small>
 							</td>
 						</tr>
 						<tr class="small">

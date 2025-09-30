@@ -280,7 +280,7 @@ export default {
 						@click="closeToast"
 					>
 						<template v-if="toastMessage.Subject !== ''">{{ toastMessage.Subject }}</template>
-						<template v-else> [ no subject ] </template>
+						<template v-else> [ без темы ] </template>
 					</RouterLink>
 				</div>
 			</div>

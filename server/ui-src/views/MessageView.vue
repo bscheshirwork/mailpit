@@ -502,7 +502,7 @@ export default {
 					aria-expanded="false"
 				>
 					<i class="bi bi-file-arrow-down-fill"></i>
-					<span class="d-none d-md-inline ms-1">Загрузить</span>
+					<span class="d-none d-md-inline ms-1">Скачать как...</span>
 				</button>
 				<ul class="dropdown-menu dropdown-menu-end">
 					<li>
@@ -511,20 +511,20 @@ export default {
 							class="dropdown-item"
 							title="Message source including headers, body and attachments"
 						>
-							Raw message
+							Сырое сообщение
 						</a>
 					</li>
 					<li v-if="message.HTML">
 						<button class="dropdown-item" @click="downloadMessageBody(message.HTML, 'html')">
-							HTML body
+							Тело письма как HTML
 						</button>
 					</li>
 					<li v-if="message.HTML">
-						<button class="dropdown-item" @click="screenshotMessageHTML()">HTML screenshot</button>
+						<button class="dropdown-item" @click="screenshotMessageHTML()">Фотку (HTML screenshot)</button>
 					</li>
 					<li v-if="message.Text">
 						<button class="dropdown-item" @click="downloadMessageBody(message.Text, 'txt')">
-							Text body
+							Тело письма как текст
 						</button>
 					</li>
 					<template v-if="message.Attachments && message.Attachments.length">
@@ -532,7 +532,7 @@ export default {
 							<hr class="dropdown-divider" />
 						</li>
 						<li>
-							<h6 class="dropdown-header">Attachments</h6>
+							<h6 class="dropdown-header">Вложения</h6>
 						</li>
 						<li v-for="part in message.Attachments" :key="part.PartID">
 							<RouterLink
@@ -559,7 +559,10 @@ export default {
 							<hr class="dropdown-divider" />
 						</li>
 						<li>
-							<h6 class="dropdown-header">Inline image<span v-if="message.Inline.length > 1">s</span></h6>
+							<h6 class="dropdown-header">Встроенн<span v-if="message.Inline.length === 1">ое</span><span
+							v-else>ые</span> (Inline) изображени<span v-if="message.Inline.length === 1">е</span
+							><span v-else>я</span
+							></h6>
 						</li>
 						<li v-for="part in message.Inline" :key="part.PartID">
 							<RouterLink
@@ -617,7 +620,7 @@ export default {
 					<span
 						v-if="mailbox.unread && !errorMessage"
 						class="badge rounded-pill ms-1 float-end text-bg-secondary"
-						title="Unread messages"
+						title="Непрочитанные письма"
 					>
 						{{ formatNumber(mailbox.unread) }}
 					</span>
@@ -664,7 +667,7 @@ export default {
 							</div>
 							<div class="col-12 overflow-x-hidden mt-1">
 								<div class="text-truncates small">
-									<b>{{ summary.Subject !== "" ? summary.Subject : "[ no subject ]" }}</b>
+									<b>{{ summary.Subject !== "" ? summary.Subject : "[ без темы ]" }}</b>
 								</div>
 							</div>
 							<div v-if="summary.Tags.length" class="col-12">
