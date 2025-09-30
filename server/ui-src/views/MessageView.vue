@@ -201,7 +201,7 @@ export default {
 						}
 					} else if (error.request) {
 						// The request was made but no response was received
-						this.errorMessage = "Error sending data to the server. Please refresh the page.";
+						this.errorMessage = "Ошибка отправки данных на сервер. Включите и перезагрузите страницу.";
 					} else {
 						// Something happened in setting up the request that triggered an Error
 						this.errorMessage = error.message;

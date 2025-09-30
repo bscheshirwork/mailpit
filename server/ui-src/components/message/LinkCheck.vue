@@ -147,7 +147,7 @@ export default {
 						// The request was made but no response was received
 						// `error.request` is an instance of XMLHttpRequest in the browser and an instance of
 						// http.ClientRequest in node.js
-						this.error = "Error sending data to the server. Please try again.";
+						this.error = "Ошибка отправки данных на сервер. Включите и попробуйте снова.";
 					} else {
 						// Something happened in setting up the request that triggered an Error
 						this.error = error.message;

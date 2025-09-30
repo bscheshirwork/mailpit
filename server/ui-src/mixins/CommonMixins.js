@@ -212,7 +212,7 @@ export default {
 				}
 			} else if (error.request) {
 				// The request was made but no response was received
-				alert("Error sending data to the server. Please try again.");
+				alert("Ошибка отправки данных на сервер. Включите и попробуйте снова.");
 			} else {
 				// Something happened in setting up the request that triggered an Error
 				alert(error.message);
